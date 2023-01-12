@@ -3,13 +3,12 @@ export function rotateRight(matrix) {
 
 
   
-  for (let c = 0; c < matrix.length; c++) {
-    let row = [];
-    for (let r = matrix.length - 1; r >= 0; r--) {
-      row.push(matrix[r][c]);
-    }
-    result.push(row);
-  }
+  matrix.map((e) => {
+    let arr = [...e];
+    arr.reverse();
+    result.push(arr);
+  });
+
 
   return result;
 }
